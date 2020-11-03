@@ -12,32 +12,39 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Ruta /
+//*****Ruta HOME */
 Route::get('/', function () {
     return view('home');
 });
-// Ruta Login
-Route::get('login', function () {
-    return view('auth.login');
+
+//*****Rutas HOTEL */
+Route::get('hotel/historia', function () {
+    return view('hotel.historia');
 });
-// Ruta logout
-Route::get('logout', function () {
-    return "Logout usuario";
+Route::get('hotel/mision-vision', function () {
+    return view('hotel.mision-vision');
 });
-// Ruta Catalogo
-Route::get('catalog', function () {
-    return view('catalog.index');
+Route::get('hotel/ubicacion', function () {
+    return view('hotel.ubicacion');
 });
-// Ruta Catalogo/Show => Parametros
-Route::get('catalog/show/{id}', function ($id) {
-    return view('catalog.show', array('id' => $id));
-});
-// Ruta Catalogo/Create
-Route::get('catalog/create', function () {
-    return view('catalog.create');
-});
-// Ruta Catalogo/Edit => Parametros
-Route::get('catalog/edit/{id}', function ($id) {
-    return view('catalog.edit', array('id' => $id));
+Route::get('hotel/equipo', function () {
+    return view('hotel.equipo');
 });
 
+//*****Rutas SERVICIOS */
+Route::get('servicios/habitaciones', function () {
+    return view('servicios.habitaciones');
+});
+Route::get('servicios/eventos/{id}', function ($id) {
+    return view('servicios.eventos', array('id' => $id));
+});
+
+//*****Ruta RESERVAS */
+Route::get('reservas', function () {
+    return view('reservas.reservas');
+});
+
+//*****Ruta CONTACTO */
+Route::get('contacto', function () {
+    return view('contacto');
+});
