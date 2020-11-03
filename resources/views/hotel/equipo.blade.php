@@ -9,6 +9,7 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
+        <h2>Est. Ingeniería de Sistemas</h2>
           <p>Somos dos estudiantes de Ingeniería de Sistemas, de la Universidad de Nariño, cada uno con amplio conocimiento en su area, para ofrecer calidad en cada uno de nuestros servicios.
             Visitanos, contamos con todos los implementos de bioseguridad por la Organización Mundial de la Salud (OMS), enterate por ti mismo, será um gusto atenderte.</p>
         </div>
