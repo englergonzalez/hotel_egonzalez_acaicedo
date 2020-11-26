@@ -1,50 +1,34 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\ServiciosController;
+use App\Http\Controllers\ContactoController;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+|-------------------------------------------------------------------------
 |
 */
 //*****Ruta HOME */
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 //*****Rutas HOTEL */
-Route::get('hotel/historia', function () {
-    return view('hotel.historia');
-});
-Route::get('hotel/mision-vision', function () {
-    return view('hotel.mision-vision');
-});
-Route::get('hotel/ubicacion', function () {
-    return view('hotel.ubicacion');
-});
-Route::get('hotel/equipo', function () {
-    return view('hotel.equipo');
-});
+Route::get('hotel/historia',[HotelController::class, 'historia']);
+Route::get('hotel/mision-vision', [HotelController::class, 'misionVision']);
+Route::get('hotel/ubicacion', [HotelController::class, 'ubicacion']);
+Route::get('hotel/equipo',  [HotelController::class, 'equipo']);
 
 //*****Rutas SERVICIOS */
 Route::get('servicios/habitaciones', function () {
     return view('servicios.habitaciones');
 });
-Route::get('servicios/eventos/{id}', function ($id) {
-    return view('servicios.eventos', array('id' => $id));
-});
+Route::get('servicios/eventos/{id}',[ServiciosController::class,'eventos']);
 
 //*****Ruta RESERVAS */
-Route::get('reservas', function () {
-    return view('reservas.reservas');
-});
+Route::get('reservas',[ContactoController::class, 'reserva']);
 
 //*****Ruta CONTACTO */
-Route::get('contacto', function () {
-    return view('contacto');
-});
+Route::get('contacto', [ContactoController::class, 'contacto']);
