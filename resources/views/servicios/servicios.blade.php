@@ -1,13 +1,12 @@
 @extends('master')
 @section('content')
-    Habitaciones tipo Estándar,
-    Superior, Ejecutiva, Suite
+    Todos nuestros servicios son premium
 @stop
 
 @section('inf')
 <div class="container">
     <br>
-    <h1>{{$titulo}}</h1>
+    <h1>{{$titulo ?? ''}}</h1>
     <ul>
         @foreach($servicios as $c)
             <li> {{ $c }} </li>

@@ -41,12 +41,29 @@
                 Eventos</a></li>
             </ul>
         </li>
+
+        <li class="drop-down nav-item" >
+            <a class="nav-link" href="#">
+                <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                Clientes
+            </a>
+          <ul>
+                <li class="nav-item"><a href="{{url('/clientes/visualizar')}}">
+                Visualizar</a></li>
+            </ul>
+        </li>
+        
         <li class="nav-item {{  Request::is('reservas') ? 'active' : ''}}">
             <a class="nav-link" href="{{url('/reservas')}}">
                 Reservas
             </a>
         </li>
-        <li><a href="{{url('/contacto')}}">Contacto</a></li>
+        <li class="nav-item {{  Request::is('facturacion') ? 'active' : ''}}">
+            <a class="nav-link" href="{{url('/facturacion')}}">
+                Facturacion
+            </a>
+        </li>
+        <li><a href="{{url('/contactenos')}}">Contacto</a></li>
           <!--@if( true || Auth::check() )
             <li class="nav-item">
                 <form action="{{ url('/logout') }}" method="POST" style="display:inline">

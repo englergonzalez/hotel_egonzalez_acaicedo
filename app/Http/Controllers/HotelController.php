@@ -7,19 +7,26 @@ use Illuminate\Http\Request;
 class HotelController extends Controller
 {
     //
-    public function historia(){
+    public function getIndex(){
+        return view('home');
+    }
+
+    public function showHistoria(){
         return view('hotel.historia');
     }
 
-    public function misionVision(){
+    public function showMisionVision(){
         return view('hotel.mision-vision');
     }
 
-    public function ubicacion(){
+    public function showUbicacion(){
         return view('hotel.ubicacion');
     }
 
-    public function equipo(){
+    public function showEquipo(){
         return view('hotel.equipo');
+    }
+    public function showContactos(){
+        return view('contacto');
     }
 }

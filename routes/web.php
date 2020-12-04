@@ -1,34 +1,44 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\HabitacionesController;
+use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\FacturacionController;
+use App\Http\Controllers\ReservasController;
 use App\Http\Controllers\ServiciosController;
-use App\Http\Controllers\ContactoController;
+
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |-------------------------------------------------------------------------
-|
 */
 //*****Ruta HOME */
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HotelController::class, 'getIndex']);
 
 //*****Rutas HOTEL */
-Route::get('hotel/historia',[HotelController::class, 'historia']);
-Route::get('hotel/mision-vision', [HotelController::class, 'misionVision']);
-Route::get('hotel/ubicacion', [HotelController::class, 'ubicacion']);
-Route::get('hotel/equipo',  [HotelController::class, 'equipo']);
+Route::get('hotel/historia',[HotelController::class, 'showHistoria']);
+Route::get('hotel/mision-vision', [HotelController::class, 'showMisionVision']);
+Route::get('hotel/ubicacion', [HotelController::class, 'showUbicacion']);
+Route::get('hotel/equipo',  [HotelController::class, 'showEquipo']);
 
-//*****Rutas SERVICIOS */
-Route::get('servicios/habitaciones', function () {
+Route::get('servicios/habitaciones',[HabitacionesController::class,'showHabitaciones']);
+/*****Rutas SERVICIOS
+ * Route::get('servicios/habitaciones', function () {
     return view('servicios.habitaciones');
-});
-Route::get('servicios/eventos/{id}',[ServiciosController::class,'eventos']);
+}); */
+Route::get('servicios/servicios',[ServiciosController::class,'showServicios']);
+Route::get('servicios/eventos/{id}',[ServiciosController::class,'showEventos']);
+
+//*****Ruta CLIENTES */
+Route::get('clientes/visualizar', [ClientesController::class, 'showClientes']);
+
+//*****Ruta FACTURA */
+Route::get('facturacion', [FacturacionController::class, 'getFactura']);
 
 //*****Ruta RESERVAS */
-Route::get('reservas',[ContactoController::class, 'reserva']);
+Route::get('reservas',[ReservasController::class, 'getReservas']);
 
 //*****Ruta CONTACTO */
-Route::get('contacto', [ContactoController::class, 'contacto']);
+Route::get('contactenos', [HotelController::class, 'showContactos']);
