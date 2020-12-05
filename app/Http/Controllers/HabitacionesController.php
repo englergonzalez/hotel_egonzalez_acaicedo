@@ -8,7 +8,7 @@ class HabitacionesController extends Controller
 {
     //
     public function showHabitaciones(){
-        $titulo = "Servicios de habitaciones";
+        $titulo = "Habitaciones";
         $servicios = DB::table('habitacion')
                     ->join('precio', 'precio_id', '=', 'precio.id')
                     ->get();

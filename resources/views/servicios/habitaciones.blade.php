@@ -18,15 +18,13 @@
       @foreach($servicios as $c)
       <div class="col-lg-4 col-md-6 portfolio-item">
               <div class="portfolio-wrap">
-               <img src="{{ url( 'img/productos/'.$c->foto) }}" class="img-fluid" alt="">
+               <img src="{{ url( 'img/habitaciones/'.$c->foto) }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{{ $c->descripcion }}</h4>
                   <p> Camas: {{ $c->numCamas }}</p>
                   <p> Precio: {{ $c->precio }}</p>
                   <div class="portfolio-links">
-                    <a href="{{ url( 'img/productos/'.$c->foto ) }}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i>Imagen</a> |
-                    <a href='{{ url("catalogo/detalle/$c->foto") }}'> 
-                    Ver detalle </a>
+                    <a href="{{ url( 'img/habitaciones/'.$c->foto ) }}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i>Imagen</a> 
                   </div>
                 </div>
                 

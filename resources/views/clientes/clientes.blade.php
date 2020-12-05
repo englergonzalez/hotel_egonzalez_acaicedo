@@ -15,7 +15,7 @@
         @foreach($clientes as $p)
         <div class="col-md-3">
             <div class="card" style="width: 15rem;">
-                <img src='{{url("/imag/clientes/$p->foto")}}' class="card-img-top" alt="{{ $p->foto }}">
+                <img src='{{url("/img/clientes/$p->foto")}}' class="card-img-top" alt="{{ $p->foto }}">
                 <div class="card-body">
                     <h5 class="card-title"> {{ $p->nombre }} </h5>
                     <p class="card-text"> DNI :  {{ $p->dni }} </p>
