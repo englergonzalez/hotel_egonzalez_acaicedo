@@ -29,7 +29,7 @@ class CreateFacturaTable extends Migration
                     ->on('formaPago');  // De que tabla
             $table->date('entrada'); 
             $table->date('salida'); 
-            $table->double('total', 8, 2); 
+            $table->double('total', 10, 2); 
             $table->timestamps();
         });
     }
