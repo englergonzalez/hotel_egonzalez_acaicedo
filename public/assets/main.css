@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 992px) {
   #hero {
     margin-top: 60px;
-    height: calc(30vh - 60px);
+    height: calc(55vh - 60px);
   }
 }
 
@@ -1024,4 +1024,38 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
+}
+
+/*-------------------------------------------------------------Buscar-----------------------------------------------*/
+ .buscar form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 4px 0 0 4px;
+}
+
+ .buscar form input[type="search"] {
+  border: 0;
+  padding: 4px;
+  width: calc(100% - 110px);
+}
+
+ .buscar form input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: #1bac91;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 0 4px 4px 0;
+}
+
+ .buscar form input[type="submit"]:hover {
+  background: #14806c;
 }

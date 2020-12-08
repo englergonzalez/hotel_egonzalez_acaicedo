@@ -30,33 +30,5 @@
 
 
 </div>
-
-    <!-- div class="container">
-
-      <div class="row portfolio-container" data-aos="fade-up">
-      @foreach($clientes as $p)
-      <div class="col-lg-4 col-md-6 portfolio-item">
-              <div class="portfolio-wrap">
-               <img src="{{ url( 'img/clientes/') }}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4> {{ $p->nombre }} </h4>
-                  <p>{{ $p->dni}}</p>
-                  <p class="card-text"> DNI :  {{ $p->dni }} </p>
-                    <p class="card-text"> Genero :  {{ $p->genero }} </p>
-                    <p class="card-text"> Telefono :  {{ $p->telefono }} </p>
-                    <p class="card-text"> Direccion :  {{ $p->domicilio }} </p>
-                  <div class="portfolio-links">
-                    <a href="{{ url( 'img/clientes/' )}}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i>Imagen</a>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-
-        @endforeach
-        </div>
-
-
-    </div-->
-  </section>
+</section>
 @stop

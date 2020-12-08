@@ -20,6 +20,7 @@
                     <li><a href="{{url('/hotel/mision-vision')}}">Misión y Visión</a></li>
                     </ul>
                 </li>
+                <li><a href="{{url('/hotel/consultas')}}">Consultas</a></li>
                 <li><a href="{{url('/hotel/equipo')}}">Equipo</a></li>
                 <li><a href="{{url('/hotel/ubicacion')}}">Ubicación</a></li>
             </ul>
@@ -77,7 +78,16 @@
                 </form>
             </li>
         @endif-->
+        
         </ul>
+    
       </nav>
+      
     </div>
+    <div class="float-right col-lg-3 col-md-4 buscar ">
+        <form action="{{ url('/') }}" method="post" role="form" class="php-email-form">
+            <input type="search" name="buscar" placeholder="Buscar" data-rule="search" >
+            <input type="submit" value="Buscar">
+        </form>
+</div>
   </header>

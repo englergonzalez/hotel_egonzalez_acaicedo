@@ -42,3 +42,6 @@ Route::get('reservas',[ReservasController::class, 'getReservas']);
 
 //*****Ruta CONTACTO */
 Route::get('contactenos', [HotelController::class, 'showContactos']);
+
+//*****Ruta CONSULTA */
+Route::get('hotel/consultas', [HotelController::class, 'showConsultas']);

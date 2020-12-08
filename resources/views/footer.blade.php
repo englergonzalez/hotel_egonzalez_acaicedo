@@ -45,7 +45,7 @@
 
             <h4>Boletín</h4>
             <p>Mantente informado de todo lo que sucede, los mejores descuentos y promociones.</p>
-              <form action="class/boletin.php" method="post" role="form" class="php-email-form">
+              <form action="{{ url('boletin.php') }}" method="post" role="form" class="php-email-form">
                 <input type="email" name="email" placeholder="Correo eletrocnico" data-rule="email" data-msg="Por favor, introduzca un correo electrónico válido">
                 <input type="submit" value="Subscribirse">
                 <div class="validate"></div>
